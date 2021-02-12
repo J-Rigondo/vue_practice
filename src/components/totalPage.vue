@@ -8,11 +8,18 @@
 export default {
   name: "totalPage",
   created() {
-    // this.EventBus.$on('params', function (payload){
-    //   console.log('초기조회받아라')
-    //   console.log(payload);
-    // })
+    //console.log(this.$parent.parentData)
+    //console.log(this.$parent.$parent.dashboard)
+
+    console.log('totalPage created')
+    this.EventBus.$on('params', function (payload){
+      console.log('totalPage on')
+      console.log(payload);
+    });
   },
+  mounted() {
+    console.log('totalPage mounted')
+  }
 }
 
 </script>

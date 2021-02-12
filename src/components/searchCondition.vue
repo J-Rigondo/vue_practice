@@ -14,12 +14,15 @@ export default {
     }
   },
   created() {
-    console.log('초기 조회 실행')
+    console.log('searchCondition created')
+  },
+  mounted() {
+    console.log('searchCondition mounted')
     this.searchHandler();
   },
   methods: {
     searchHandler: function() {
-      console.log('설치실행행')
+      console.log('searchCondition emit')
      this.EventBus.$emit('params','heelo')
     }
   }

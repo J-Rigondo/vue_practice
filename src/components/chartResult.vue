@@ -18,18 +18,17 @@ export default {
   },
   data: function(){
     return {
-      show: false
-
+      show: true,
+      parentData: 'parent'
     }
   },
   created() {
-    this.EventBus.$on('params', function (payload){
-      console.log('초기조회받아라')
-      console.log(payload);
-    })
+    console.log('chartResult created')
+
+
   },
   mounted() {
-
+    console.log('chartResult mounted')
   },
 
   methods: {
